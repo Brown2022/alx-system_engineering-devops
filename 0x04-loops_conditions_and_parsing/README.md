@@ -11,9 +11,11 @@ Tasks
 -----
 
 0. Create a SSH RSA key pair
+----------------------------
 
 0-RSA_public_key.pub: A public SSH key uploaded for the purposes of School.
 1. For Best School loop
+-----------------------
 
 Bash script that displays Best School 10 times
 
