@@ -1,0 +1,98 @@
+What happens when you type https://www.google.com in your browser and press Enter?
+
+Every day you open up your browser and navigate to your favorite websites — whether it be social media, news, or e-commerce sites. You go to this page by typing in a url or clicking on a link to the page. Have you ever thought about what happens behind the scenes? How does the news get to you when you press enter after typing in the URL? How did the images on this post show up in your browser? How does your Twitter feed and the tweet data show up in your browser securely?
+
+In this post, we’ll look at what happens when you type a URL into your browser and press enter.
+End to end, the process involves the browser, your computer’s operating system, your internet service provider, the server where you host the site, and services running on that server. It’s important to understand where things can go wrong, where to look for performance issues, and ensure you’re offering a secure experience for your users.
+
+In this article we will be covering the following topics:
+
+DNS request
+TCP/IP
+Firewall
+HTTPS/SSL
+Load-balancer
+Web server
+Application server
+Database
+
+Let’s have a quick run-through of what the above terms mean.
+
+DNS request:
+
+A DNS simply stands for Domain Name System which is basically an address like google.com. In other words, it is how your computer find addresses.
+
+After you’ve typed the URL into your browser and pressed enter, the browser needs to figure out which server on the Internet to connect to. To do that, it needs to look up the IP address of the server hosting the website using the domain you typed in. It does this using a DNS lookup
+
+TCP/IP:
+
+TCP/IP stands for Transmission Control Protocol/Internet Protocol and is a suite of communication protocols used to interconnect network devices on the internet. TCP/IP is also used as a communications protocol in a private computer network.
+
+Using the public Internet routing infrastructure, packets from a client browser request get routed through the router, the ISP, through an internet exchange to switch ISPs or networks, all using transmission control protocol, more commonly known as TCP, to find the server with the IP address to connect to. But this is a very roundabout way to get there and it’s not efficient.
+
+Instead, many sites use a content delivery network, or CDN, to cache static and dynamic content closer to the browser. 
+
+Each device on the Internet — servers, cell phones, your smart refrigerator — all have a unique address called an IP address. An IP address contains four numbered parts:
+
+203.0.113.0
+
+But numbers like this are hard to remember! That’s where domain names come in. Google.com much easier to remember than 203.0.113.0, right? Imagine having to remember all the phone numbers of your contacts without having the Contacts app on your phone. Your Contacts app lets you look up phone numbers by name
+
+Firewall:
+
+A firewall is a network security device that monitors incoming and outgoing network traffic and permits or blocks data packets based on a set of security rules. Its purpose is to establish a barrier between your internal network and incoming traffic from external sources in order to block malicious traffic like viruses and hackers.
+
+HTTPS/SSL:
+
+HTTPS is a secure extension of HTTP. Websites that install and configure an SSL/TLS certificate can use the HTTPS protocol to establish a secure connection with the server. While SSL stands for Secure Sockets Layer. A type of digital security that allows encrypted communication between a website and a web browser. The technology is currently deprecated and has been replaced entirely by TLS.
+
+Now that the browser has a connection to the server, it follows the rules of communication for the HTTP(s) protocol. It starts with the browser sending an HTTP request to the server to request the contents of the page. The HTTP request contains a request line, headers (or metadata about the request), and a body. The request line contains information that the server can use to determine what the client (in this case, your browser) wants to do.
+
+The request line contains the following:
+
+a request method, which is one of GET, POST, PUT, PATCH, DELETE, or a handful of other HTTP verbs
+the path, pointing to the requested resources
+the HTTP version to communicate with
+The request line for the URL request looks like this:
+
+GET /hello-world HTTP/1.1
+
+The request line tells the server that you want to GET resource at /hello-world and to communicate with HTTP/1.1.
+
+Remember that HTTP verbs express the semantic intent of your request. You could also use the POST, PUT, or PATCH methods to send data to the server for storage, either to create new data or update existing data at the request path. The DELETE method would delete the resource at the given path. However, it’s important to know that servers don’t have to support all verbs. A server could respond with a 200 OK status to a DELETE method and not do anything with the resource.
+
+LOAD BALANCER:
+
+A load balancer manages the flow of information between the server and an endpoint device.
+
+WEB SERVER:
+
+This can be split into two sides; they are the hardware and software sides.
+
+On the hardware side, a web server connects to the internet and supports physical data interchange with other devices connects to the web.
+
+On the software side, a web server includes several parts that control how web users access hosted files.
+
+APPLICATION SERVER:
+
+Application servers physically or virtually sit between database servers storing application data and web servers communicating with clients.
+
+DATABASE:
+
+Database defined. A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS)
+
+In relevance to what happens when you type www.google.com, we have briefly explained the terms associated.
+
+WHAT HAPPENS?
+
+The following is what happens:
+
+Entering the hostname, the browser checks its DNS to find an IP address of the hostname i.e google.com
+
+https://docs.google.com/document/d/1fJ6r5cQoHwgOnlD0Nz7El3bvV0QjUPTcMGMTVLXYJuQ/edit?usp=drivesdk
+
+DNS resolution After receiving the IP address, the browser establishes a TCP connection with the server.The browser establishes an SSL connection with the server through HTTPs
+The browser waits for a response from the google server. Google server directs the request to an active load balancer and sends it to a backend service. At the backend service, the webserver is capable of serving static contents (images, videos, and audio) while the application server is responsible for generating the dynamic web page(s)
+After the server receives and decrypts the response from Google’s server, it would try to display the content received from the server based on the content-type header in the server’s response.
+
+Hope you find this article interesting.
