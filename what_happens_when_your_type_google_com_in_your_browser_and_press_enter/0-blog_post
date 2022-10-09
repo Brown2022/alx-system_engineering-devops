@@ -87,10 +87,7 @@ WHAT HAPPENS?
 
 The following is what happens:
 
-Entering the hostname, the browser checks its DNS to find an IP address of the hostname i.e google.com
-
-https://docs.google.com/document/d/1fJ6r5cQoHwgOnlD0Nz7El3bvV0QjUPTcMGMTVLXYJuQ/edit?usp=drivesdk
-
+Entering the hostname, the browser checks its DNS to find an IP address of the hostname i.e www.google.com
 DNS resolution After receiving the IP address, the browser establishes a TCP connection with the server.The browser establishes an SSL connection with the server through HTTPs
 The browser waits for a response from the google server. Google server directs the request to an active load balancer and sends it to a backend service. At the backend service, the webserver is capable of serving static contents (images, videos, and audio) while the application server is responsible for generating the dynamic web page(s)
 After the server receives and decrypts the response from Google’s server, it would try to display the content received from the server based on the content-type header in the server’s response.
