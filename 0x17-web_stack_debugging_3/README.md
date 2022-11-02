@@ -19,8 +19,10 @@ Requirements:
 [web stack debugging](https://alx-intranet.hbtn.io/concepts/68)
 [Youtube video First 5 Commands When I Connect on a Linux Server](https://www.youtube.com/watch?v=1_gqlbADaAw)
 
-Web stack debugging
+<h3>Web stack debugging</h3>
+
 Intro
+
 Debugging usually takes a big chunk of a software engineer’s time. The art of debugging is tough and it takes years, even decades to master, and that is why seasoned software engineers are the best at it… experience. They have seen lots of broken code, buggy systems, weird edge cases and race conditions.
 [non exhaustive guide to debugging](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/45dffb0b1da8dc2ce47e340d7f88b05652c0f486.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221102%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221102T124210Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c13028b8dedd9ee22a0a8c21af4f05c9e5b0bcb30a1bebd6bf890fcae5d80545)
 
